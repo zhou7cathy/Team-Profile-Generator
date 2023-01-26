@@ -1,0 +1,12 @@
+header {
+    text-align: center;
+    background: rgb(76, 206, 206);
+    padding:10px;
+}
+
+.container{
+    display: flex;
+}
+.card{
+    margin: 30px;
+}
