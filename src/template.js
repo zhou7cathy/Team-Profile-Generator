@@ -15,9 +15,7 @@ function bodyTemplate() {
         </header>
     
         <div class="container">
-            managerReplaceable
-            engineerReplaceable
-            internReplaceable
+            itemsReplaceable
         </div>
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -31,7 +29,7 @@ function managerTemplate() {
     const template = `  
                 <div class="card manager" style="width: 18rem;">
                     <div class="card-header">
-                        name: nameReplaceable
+                        name: nameReplaceable<br>
                         position: Manager
                     </div>
                     <ul class="list-group list-group-flush">
@@ -48,7 +46,7 @@ function engineerTemplate() {
     const template = `
             <div class="card engineer" style="width: 18rem;">
                 <div class="card-header">
-                    name: nameReplaceable
+                    name: nameReplaceable<br>
                     position: Engineer
                 </div>
                 <ul class="list-group list-group-flush">
@@ -65,7 +63,7 @@ function internTemplate() {
     const template = ` 
         <div class="card intern" style="width: 18rem;">
             <div class="card-header">
-                name: nameReplaceable
+                name: nameReplaceable<br>
                 position: Intern
             </div>
             <ul class="list-group list-group-flush">

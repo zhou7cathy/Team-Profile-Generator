@@ -87,7 +87,7 @@ const internQuestions = [
     {
         type: 'input',
         message: 'What is employee\'s ID?',
-        name: 'ID',
+        name: 'employeeID',
         validate: function (ID) {
     
             if (ID != "") {
@@ -152,7 +152,7 @@ const engineerQuestions = [
     {
         type: 'input',
         message: 'What is employee\'s ID?',
-        name: 'ID',
+        name: 'employeeID',
         validate: function (ID) {
     
             if (ID != "") {
@@ -213,11 +213,47 @@ function promptQuestion(questions){
         } else {
             console.log('Building HTML')
             // use template and use all response to build the html
+            buildHTML();
         }
         
-        // fs.writeFile('index.html',`${JSON.stringify(response)}\n`, (err) =>
-        // err ? console.log(err) : console.log('Input saved!'))
+        fs.writeFile('index.html',`${JSON.stringify(response)}\n`, (err) =>
+        err ? console.log(err) : console.log('Input saved!'))
     });
+}
+
+function buildHTML(){
+    var finalResult = '';
+    allAnswers.forEach(item => {
+        if (item.managerName) {
+           const managerTemp = template.managerTemplate();
+           let tempResult = managerTemp.replace("nameReplaceable", item.managerName);
+           tempResult = tempResult.replace("idReplaceable", item.employeeID);
+           tempResult = tempResult.replace("emailReplaceable", item.email);
+           tempResult = tempResult.replace("officeNumberReplaceable", item.office);
+           finalResult += tempResult;
+        } else if (item.internName) {
+            console.log(item.internName)
+            const internTemp = template.internTemplate();
+            let tempResult = internTemp.replace("nameReplaceable", item.internName);
+            tempResult = tempResult.replace("idReplaceable", item.employeeID);
+            tempResult = tempResult.replace("emailReplaceable", item.email);
+            tempResult = tempResult.replace("schoolReplaceable", item.school);
+            finalResult += tempResult;
+        } else if (item.engineerName) {
+            console.log(item.engineerName)
+            const engineerTemp = template.engineerTemplate();
+            let tempResult = engineerTemp.replace("nameReplaceable", item.engineerName);
+            tempResult = tempResult.replace("idReplaceable", item.employeeID);
+            tempResult = tempResult.replace("emailReplaceable", item.email);
+            tempResult = tempResult.replace("gitHubReplaceable", item.git);
+            finalResult += tempResult;
+        }
+    });
+    let bodyTemp = template.bodyTemplate();
+    bodyTemp = bodyTemp.replace('itemsReplaceable', finalResult);
+    fs.writeFile('./dist/index.html', bodyTemp, (err) =>
+      err ? console.log(err) : console.log('Successfully created index.html!')
+    );
 }
 
 promptQuestion(managerQuestions);
