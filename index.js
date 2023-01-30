@@ -215,9 +215,6 @@ function promptQuestion(questions){
             // use template and use all response to build the html
             buildHTML();
         }
-        
-        fs.writeFile('index.html',`${JSON.stringify(response)}\n`, (err) =>
-        err ? console.log(err) : console.log('Input saved!'))
     });
 }
 
@@ -229,6 +226,7 @@ function buildHTML(){
            let tempResult = managerTemp.replace("nameReplaceable", item.managerName);
            tempResult = tempResult.replace("idReplaceable", item.employeeID);
            tempResult = tempResult.replace("emailReplaceable", item.email);
+           tempResult = tempResult.replace("emailReplaceable", item.email);
            tempResult = tempResult.replace("officeNumberReplaceable", item.office);
            finalResult += tempResult;
         } else if (item.internName) {
@@ -237,6 +235,7 @@ function buildHTML(){
             let tempResult = internTemp.replace("nameReplaceable", item.internName);
             tempResult = tempResult.replace("idReplaceable", item.employeeID);
             tempResult = tempResult.replace("emailReplaceable", item.email);
+            tempResult = tempResult.replace("emailReplaceable", item.email);
             tempResult = tempResult.replace("schoolReplaceable", item.school);
             finalResult += tempResult;
         } else if (item.engineerName) {
@@ -244,13 +243,16 @@ function buildHTML(){
             const engineerTemp = template.engineerTemplate();
             let tempResult = engineerTemp.replace("nameReplaceable", item.engineerName);
             tempResult = tempResult.replace("idReplaceable", item.employeeID);
+            tempResult = tempResult.replace("emailLinkReplaceable", item.email);
             tempResult = tempResult.replace("emailReplaceable", item.email);
+            tempResult = tempResult.replace("gitHubLinkReplaceable", item.git);
             tempResult = tempResult.replace("gitHubReplaceable", item.git);
             finalResult += tempResult;
         }
     });
     let bodyTemp = template.bodyTemplate();
     bodyTemp = bodyTemp.replace('itemsReplaceable', finalResult);
+
     fs.writeFile('./dist/index.html', bodyTemp, (err) =>
       err ? console.log(err) : console.log('Successfully created index.html!')
     );

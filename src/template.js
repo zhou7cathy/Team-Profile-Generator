@@ -27,35 +27,35 @@ function bodyTemplate() {
 
 function managerTemplate() {
     const template = `  
-                <div class="card manager" style="width: 18rem;">
-                    <div class="card-header">
-                        name: nameReplaceable<br>
-                        position: Manager
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID: idReplaceable</li>
-                        <li class="list-group-item">Email: emailReplaceable</li>
-                        <li class="list-group-item">Office number: officeNumberReplaceable</li>
-                    </ul>
-                </div>`;    
+        <div class="card manager" style="width: 18rem;">
+            <div class="card-header">
+                name: nameReplaceable<br>
+                position: Manager
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: idReplaceable</li>
+                <li class="list-group-item">Email: <a href="mailto:emailLinkReplaceable">emailReplaceable</a></li>
+                <li class="list-group-item">Office number: officeNumberReplaceable</li>
+            </ul>
+        </div>`;    
     
     return template;
 }
 
 function engineerTemplate() {
     const template = `
-            <div class="card engineer" style="width: 18rem;">
-                <div class="card-header">
-                    name: nameReplaceable<br>
-                    position: Engineer
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: idReplaceable</li>
-                    <li class="list-group-item">Email: emailReplaceable</li>
-                    <li class="list-group-item">GitHub: gitHubReplaceable</li>
-                </ul>
-            </div>`;
-    
+        <div class="card engineer" style="width: 18rem;">
+            <div class="card-header">
+                name: nameReplaceable<br>
+                position: Engineer
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: idReplaceable</li>
+                <li class="list-group-item">Email: <a href="mailto:emailLinkReplaceable">emailReplaceable</a></li>
+                <li class="list-group-item">GitHub:<a href="https://github.com/gitHubLinkReplaceable">gitHubReplaceable</li>
+            </ul>
+        </div>`;
+
     return template;
 }
 
@@ -68,7 +68,7 @@ function internTemplate() {
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: idReplaceable</li>
-                <li class="list-group-item">Email: emailReplaceable</li>
+                <li class="list-group-item">Email: <a href="mailto:emailLinkReplaceable">emailReplaceable</a></li>
                 <li class="list-group-item">School: schoolReplaceable</li>
             </ul>
         </div>`;
