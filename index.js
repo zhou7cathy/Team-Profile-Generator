@@ -225,7 +225,7 @@ function buildHTML(){
            const managerTemp = template.managerTemplate();
            let tempResult = managerTemp.replace("nameReplaceable", item.managerName);
            tempResult = tempResult.replace("idReplaceable", item.employeeID);
-           tempResult = tempResult.replace("emailReplaceable", item.email);
+           tempResult = tempResult.replace("emailLinkReplaceable", item.email);
            tempResult = tempResult.replace("emailReplaceable", item.email);
            tempResult = tempResult.replace("officeNumberReplaceable", item.office);
            finalResult += tempResult;
@@ -234,7 +234,7 @@ function buildHTML(){
             const internTemp = template.internTemplate();
             let tempResult = internTemp.replace("nameReplaceable", item.internName);
             tempResult = tempResult.replace("idReplaceable", item.employeeID);
-            tempResult = tempResult.replace("emailReplaceable", item.email);
+            tempResult = tempResult.replace("emailLinkReplaceable", item.email);
             tempResult = tempResult.replace("emailReplaceable", item.email);
             tempResult = tempResult.replace("schoolReplaceable", item.school);
             finalResult += tempResult;
