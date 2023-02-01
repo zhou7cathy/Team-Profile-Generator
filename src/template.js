@@ -52,7 +52,7 @@ function engineerTemplate() {
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: idReplaceable</li>
                 <li class="list-group-item">Email: <a href="mailto:emailLinkReplaceable">emailReplaceable</a></li>
-                <li class="list-group-item">GitHub:<a href="https://github.com/gitHubLinkReplaceable">gitHubReplaceable</li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/gitHubLinkReplaceable">gitHubReplaceable</a></li>
             </ul>
         </div>`;
 
