@@ -26,7 +26,7 @@ Inquirer version 8.2.4
 -THEN I exit the application, and the HTML is generated
 
 -The following video shows the application's usage, appearance and functionality:
-
+https://drive.google.com/file/d/1xHCgWx5YL_05GayMqr6EheEJ0uugnroP/view
 
 ## License
 N/A
