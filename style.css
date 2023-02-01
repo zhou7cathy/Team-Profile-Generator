@@ -1,0 +1,18 @@
+header {
+    text-align: center;
+    background-color: rgb(18, 152, 152);
+    padding:10px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 30px;
+}
+
+.card-header{
+    background: rgb(162, 228, 228);
+}
