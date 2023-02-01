@@ -14,7 +14,7 @@ function bodyTemplate() {
             <h1>My Team</h1>
         </header>
     
-        <div class="container">
+        <div class="container d-flex flex-row mb-3">
             itemsReplaceable
         </div>
     
@@ -52,7 +52,7 @@ function engineerTemplate() {
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: idReplaceable</li>
                 <li class="list-group-item">Email: <a href="mailto:emailLinkReplaceable">emailReplaceable</a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/gitHubLinkReplaceable">gitHubReplaceable</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/gitHubLinkReplaceable" target="_blank" >gitHubReplaceable</a></li>
             </ul>
         </div>`;
 

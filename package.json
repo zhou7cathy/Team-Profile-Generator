@@ -1,9 +1,10 @@
 {
   "name": "team-profile-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "This command-line application is created for users to be able to generate a webpage that displays their team's basic info. In order to have a quick access to team members' emails and GitHub profiles.",
   "main": "index.js",
   "directories": {
+    "lib": "lib",
     "test": "tests"
   },
   "scripts": {
