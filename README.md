@@ -25,8 +25,11 @@ Inquirer version 8.2.4
 -WHEN I decide to finish building my team
 -THEN I exit the application, and the HTML is generated
 
--The following video shows the application's usage, appearance and functionality:
+-The following video shows the command-line application's usage, appearance and functionality:
 https://drive.google.com/file/d/1xHCgWx5YL_05GayMqr6EheEJ0uugnroP/view
+
+-The following image shows the generated HTML’s appearance and functionality:
+![alt text](/dist/team-generator-sample.png)
 
 ## License
 N/A
