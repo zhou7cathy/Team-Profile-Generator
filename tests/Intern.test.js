@@ -3,11 +3,11 @@ const Intern = require('./../lib/Intern');
 describe('Intern', () => {
   describe("Initialization", () => {
     it("should create an object with a name, id, email, school and role if provided valid arguments", () => {
-      const newIntern = new Intern("Ben", 321125, "Ben@gmail.com","University of Code","Intern");
-      expect(newIntern.getName()).toEqual("Ben");
+      const newIntern = new Intern("Jack", 321125, "Jack@gmail.com","Curtin University","Intern");
+      expect(newIntern.getName()).toEqual("Jack");
       expect(newIntern.getId()).toEqual(321125);
-      expect(newIntern.getEmail()).toEqual("Ben@gmail.com");
-      expect(newIntern.getSchool()).toEqual("University of Code");
+      expect(newIntern.getEmail()).toEqual("Jack@gmail.com");
+      expect(newIntern.getSchool()).toEqual("Curtin University");
       expect(newIntern.getRole()).toEqual("Intern");
     });
 
@@ -17,13 +17,13 @@ describe('Intern', () => {
     });
 
     it("should throw an error if not provided an school", () => {
-      const cb = () => new Intern("Ben", 321125, "Ben@gmail.com");
+      const cb = () => new Intern("Jack", 321125, "Jack@gmail.com");
       const err = new Error("Expected parameter 'school' to be a non-empty string");
       expect(cb).toThrowError(err);
     });
 
     it("should throw an error if 'school' is not a string", () => {
-      const cb = () => new Intern("Ben", 321125, "Ben@gmail.com",3);
+      const cb = () => new Intern("Jack", 321125, "Jack@gmail.com",3);
       const err = new Error("Expected parameter 'school' to be a non-empty string");
       expect(cb).toThrowError(err);
     }); 
